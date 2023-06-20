@@ -1,0 +1,10 @@
+boto3
+requests
+mangum
+fastapi[all]
+numpy
+accelerate
+uvicorn
+pydantic
+python-multipart
+ffmpeg-python
