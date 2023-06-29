@@ -73,6 +73,6 @@ class ServerlessFfmpegStack(Stack):
         ffmpegbucket.grant_read_write(ffmpeg_lambda_function)
 
 
-        ffmpegbucket.add_event_notification(s3.EventType.OBJECT_CREATED, s3n.LambdaDestination(ffmpeg_lambda_function))
+        ffmpegbucket.add_event_notification(s3.EventType.OBJECT_CREATED, s3n.LambdaDestination(ffmpeg_lambda_function),s3.NotificationKeyFilter(prefix="testfolder/"))
 
 

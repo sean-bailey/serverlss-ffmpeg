@@ -36,4 +36,4 @@ def handler(event, context):
     timedelta=endtime-starttime
     print(timedelta)
     # upload the processed file
-    s3_client.upload_file(output_path, bucket, f'{basename}.webm')
+    s3_client.upload_file(output_path, bucket, f'{basename.split("/")[-1]}.webm')
